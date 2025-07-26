@@ -11,7 +11,7 @@ declare global {
 }
 
 /**
- * A component that renders a real Google AdMob banner ad unit.
+ * A component that renders a real Google AdMob banner ad unit for the App.
  */
 export function AdBanner({ className }: { className?: string }) {
 
@@ -20,7 +20,7 @@ export function AdBanner({ className }: { className?: string }) {
       try {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
       } catch (err) {
-        console.error("AdSense error:", err);
+        console.error("AdMob error:", err);
       }
     };
 
@@ -40,11 +40,12 @@ export function AdBanner({ className }: { className?: string }) {
       <ins
         className="adsbygoogle"
         style={{ display: "block" }}
-        data-ad-client="ca-pub-3781633352100587" // Your AdSense Publisher ID for the website
-        data-ad-slot="6590213011" // Your Ad Unit ID for the website banner
+        data-ad-client="ca-pub-3781633352100587"
+        data-ad-slot="6590213011"
         data-ad-format="auto"
         data-full-width-responsive="true"
       ></ins>
     </div>
   );
 }
+

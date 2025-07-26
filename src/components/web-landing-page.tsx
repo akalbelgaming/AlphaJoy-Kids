@@ -48,7 +48,7 @@ const content = {
      why: {
       title: "Why Choose AlphaJoy Kids?",
       list: [
-        { icon: <Shield className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />, title: "Safe for Kids", description: "We use Google AdMob and have implemented safe ad policies to ensure a child-friendly environment." },
+        { icon: <Shield className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />, title: "Safe for Kids", description: "The app uses Google AdMob with safe ad policies, while the website uses Google AdSense, both configured for a child-friendly experience." },
         { icon: <Heart className="h-8 w-8 text-red-500 flex-shrink-0 mt-1" />, title: "Parent-Approved", description: "This app is designed under parental guidance to provide a positive and educational experience for children." },
         { icon: <Star className="h-8 w-8 text-yellow-500 flex-shrink-0 mt-1" />, title: "Learning Through Play", description: "Our interactive games keep children engaged, allowing them to learn new things while having fun." },
       ]
@@ -95,7 +95,7 @@ const content = {
     why: {
       title: "AlphaJoy Kids क्यों चुनें?",
       list: [
-        { icon: <Shield className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />, title: "बच्चों के लिए सुरक्षित", description: "हमने Google AdMob का उपयोग किया है और बच्चों के अनुकूल वातावरण सुनिश्चित करने के लिए सुरक्षित विज्ञापन नीतियां लागू की हैं।"},
+        { icon: <Shield className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />, title: "बच्चों के लिए सुरक्षित", description: "ऐप में सुरक्षित विज्ञापन नीतियों के साथ Google AdMob का उपयोग होता है, जबकि वेबसाइट पर Google AdSense का उपयोग होता है, दोनों को बच्चों के अनुकूल अनुभव के लिए कॉन्फ़िगर किया गया है।"},
         { icon: <Heart className="h-8 w-8 text-red-500 flex-shrink-0 mt-1" />, title: "माता-पिता द्वारा प्रमाणित", description: "यह ऐप माता-पिता की देखरेख में बनाया गया है ताकि बच्चों को एक सकारात्मक और सीखने योग्य माहौल मिल सके।"},
         { icon: <Star className="h-8 w-8 text-yellow-500 flex-shrink-0 mt-1" />, title: "खेल-खेल में पढ़ाई", description: "हमारे इंटरैक्टिव गेम्स बच्चों को बोर नहीं होने देते और वे खेल-खेल में ही बहुत कुछ सीख जाते हैं।"},
       ]
@@ -142,7 +142,7 @@ export function WebLandingPage() {
                 <Languages className="mr-1 md:mr-2 h-4 w-4" />
                 <span className="hidden sm:inline">{currentContent.header.toggle}</span>
             </Button>
-            <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" target="_blank" rel="noopener noreferrer">
+            <a href="https://play.google.com/store/apps/details?id=com.alphajoy.kids.app" target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="bg-green-600 hover:bg-green-700">
                 <Download className="mr-1 md:mr-2 h-4 w-4" />
                 <span className="hidden sm:inline">{currentContent.header.download}</span>
@@ -164,7 +164,7 @@ export function WebLandingPage() {
               {currentContent.hero.subtitle}
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-               <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" target="_blank" rel="noopener noreferrer">
+               <a href="https://play.google.com/store/apps/details?id=com.alphajoy.kids.app" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="w-full sm:w-auto text-base md:text-lg h-12 md:h-14 px-8 md:px-10 bg-green-600 hover:bg-green-700 shadow-lg">
                     <Download className="mr-2 md:mr-3 h-5 w-5 md:h-6 md:w-6" />
                     {currentContent.hero.download_google}
