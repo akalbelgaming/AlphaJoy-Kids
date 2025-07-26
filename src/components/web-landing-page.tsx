@@ -48,7 +48,7 @@ const content = {
      why: {
       title: "Why Choose AlphaJoy Kids?",
       list: [
-        { icon: <Shield className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />, title: "Safe for Kids", description: "The app uses Google AdMob with safe ad policies, while the website uses Google AdSense, both configured for a child-friendly experience." },
+        { icon: <Shield className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />, title: "Safe for Kids", description: "The app uses Google AdMob with safe ad policies, configured for a child-friendly experience." },
         { icon: <Heart className="h-8 w-8 text-red-500 flex-shrink-0 mt-1" />, title: "Parent-Approved", description: "This app is designed under parental guidance to provide a positive and educational experience for children." },
         { icon: <Star className="h-8 w-8 text-yellow-500 flex-shrink-0 mt-1" />, title: "Learning Through Play", description: "Our interactive games keep children engaged, allowing them to learn new things while having fun." },
       ]
@@ -95,7 +95,7 @@ const content = {
     why: {
       title: "AlphaJoy Kids क्यों चुनें?",
       list: [
-        { icon: <Shield className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />, title: "बच्चों के लिए सुरक्षित", description: "ऐप में सुरक्षित विज्ञापन नीतियों के साथ Google AdMob का उपयोग होता है, जबकि वेबसाइट पर Google AdSense का उपयोग होता है, दोनों को बच्चों के अनुकूल अनुभव के लिए कॉन्फ़िगर किया गया है।"},
+        { icon: <Shield className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />, title: "बच्चों के लिए सुरक्षित", description: "ऐप में सुरक्षित विज्ञापन नीतियों के साथ Google AdMob का उपयोग होता है, जिसे बच्चों के अनुकूल अनुभव के लिए कॉन्फ़िगर किया गया है।"},
         { icon: <Heart className="h-8 w-8 text-red-500 flex-shrink-0 mt-1" />, title: "माता-पिता द्वारा प्रमाणित", description: "यह ऐप माता-पिता की देखरेख में बनाया गया है ताकि बच्चों को एक सकारात्मक और सीखने योग्य माहौल मिल सके।"},
         { icon: <Star className="h-8 w-8 text-yellow-500 flex-shrink-0 mt-1" />, title: "खेल-खेल में पढ़ाई", description: "हमारे इंटरैक्टिव गेम्स बच्चों को बोर नहीं होने देते और वे खेल-खेल में ही बहुत कुछ सीख जाते हैं।"},
       ]

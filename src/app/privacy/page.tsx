@@ -66,7 +66,7 @@ export default function PrivacyPolicyPage() {
 
             <h2 className="text-lg font-semibold text-foreground">4. Advertisements</h2>
             <p>
-             To keep the app free, we display advertisements. Our **mobile app** uses **Google AdMob**, and our **website** uses **Google AdSense**. We have configured our ad settings to be suitable for a family and child-friendly audience. Google may use cookies and other identifiers to serve ads. For more information on how Google handles data, please review Google's Privacy & Terms.
+             To keep the app free, we display advertisements. Our mobile app uses Google AdMob, which is configured to be suitable for a family and child-friendly audience. Google may use cookies and other identifiers to serve ads. For more information on how Google handles data, please review Google's Privacy & Terms.
             </p>
 
             <h2 className="text-lg font-semibold text-foreground">5. Children's Privacy</h2>
