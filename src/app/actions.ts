@@ -1,8 +1,9 @@
+
 // This file is temporarily disabled to allow for static export.
 // The AI features that used these server actions are not compatible
 // with the `output: 'export'` configuration in next.config.ts.
 
-
+/*
 import {
   adaptiveDifficulty,
   type AdaptiveDifficultyInput,
@@ -35,4 +36,14 @@ export async function getColoringPage(prompt: string) {
         const message = error instanceof Error ? error.message : 'An unknown error occurred.';
         return { success: false, error: message };
     }
+}
+*/
+
+// Returning mock data for static export
+export async function getAdaptiveDifficulty(input: any) {
+  return { success: true, data: { recommendedDifficulty: input.difficulty, reason: 'Keep having fun!' } };
+}
+
+export async function getColoringPage(prompt: string) {
+  return { success: false, error: 'AI features are disabled in the mobile app version.' };
 }

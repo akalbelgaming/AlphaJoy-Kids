@@ -10,6 +10,7 @@ const withPWA = withPWAInit({
 });
 
 const nextConfig: NextConfig = {
+  output: 'export', // Re-enabled for Capacitor compatibility
   /* config options here */
   typescript: {
     ignoreBuildErrors: true,

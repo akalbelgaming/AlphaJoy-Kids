@@ -4,7 +4,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 const config: CapacitorConfig = {
   appId: 'com.alphajoy.kids.app',
   appName: 'AlphaJoy Kids',
-  webDir: '.next',
+  webDir: 'out',
   bundledWebRuntime: false,
   plugins: {
     SplashScreen: {
