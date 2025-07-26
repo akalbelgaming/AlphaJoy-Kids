@@ -556,7 +556,10 @@ export default function GameClient({ mode }: {mode: Mode}) {
             soundEnabled={soundEnabled}
             onSoundEnabledChange={setSoundEnabled}
         />
-        <ActivityInstructions mode={mode} />
+        <div className="flex flex-col gap-6">
+          <ActivityInstructions mode={mode} />
+          <AdBanner />
+        </div>
       </div>
     );
   };
@@ -681,7 +684,6 @@ export default function GameClient({ mode }: {mode: Mode}) {
         
         <aside className="w-full lg:w-80 lg:flex-shrink-0 flex flex-col gap-6">
           {renderSidePanel()}
-          <AdBanner />
         </aside>
 
         <main className="flex-1 flex flex-col items-center justify-start relative">
