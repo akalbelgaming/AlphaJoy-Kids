@@ -38,7 +38,7 @@ export default function ActivityPage({ mode, title }: ActivityPageProps) {
         </div>
       </header>
       
-      <main className="flex-1 flex flex-col p-4 mb-20">
+      <main className="flex-1 flex flex-col p-4">
         {isClient ? <GameClient mode={mode} /> : (
           <div className="flex-1 flex items-center justify-center">
              {/* This will be shown to crawlers and during server render */}
@@ -47,9 +47,6 @@ export default function ActivityPage({ mode, title }: ActivityPageProps) {
         )}
       </main>
 
-      <div className="fixed bottom-0 left-0 right-0 p-2 bg-background/80 backdrop-blur-sm border-t z-10">
-        <AdBanner className="max-w-4xl mx-auto"/>
-      </div>
     </div>
   );
 }

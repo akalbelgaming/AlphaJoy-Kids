@@ -558,7 +558,6 @@ export default function GameClient({ mode }: {mode: Mode}) {
         />
         <div className="flex flex-col gap-6">
           <ActivityInstructions mode={mode} />
-          <AdBanner />
         </div>
       </div>
     );
@@ -672,7 +671,7 @@ export default function GameClient({ mode }: {mode: Mode}) {
 
   if (mode === 'coloring') {
     return (
-      <div className="flex-1 w-full flex flex-col lg:flex-row gap-6 p-4 lg:p-6 mb-24">
+      <div className="flex-1 w-full flex flex-col lg:flex-row gap-6 p-4 lg:p-6">
         {renderSidePanel()}
       </div>
     );
@@ -680,7 +679,7 @@ export default function GameClient({ mode }: {mode: Mode}) {
 
   return (
     <>
-      <div className="flex-1 w-full flex flex-col lg:flex-row gap-6 p-4 lg:p-6 mb-24">
+      <div className="flex-1 w-full flex flex-col lg:flex-row gap-6 p-4 lg:p-6">
         
         <aside className="w-full lg:w-80 lg:flex-shrink-0 flex flex-col gap-6">
           {renderSidePanel()}
@@ -714,6 +713,10 @@ export default function GameClient({ mode }: {mode: Mode}) {
             <Button variant="outline" size="lg" onClick={handleNext} disabled={characterSet.length === 0}>
               Next <ArrowRight className="ml-2" />
             </Button>
+          </div>
+          
+          <div className="w-full my-4">
+              <AdBanner />
           </div>
 
           <div className="w-full flex-1 flex flex-col items-center justify-center">
