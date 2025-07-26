@@ -5,7 +5,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Eraser, Check } from 'lucide-react';
-import { AdBanner } from './ad-placeholder';
 
 interface Point {
   x: number;
@@ -172,10 +171,6 @@ export function TracingCanvas({
           ))}
         </svg>
       </div>
-
-       <div className="w-full my-4">
-         <AdBanner />
-       </div>
 
       <div className="flex gap-4">
         <Button variant="outline" size="lg" onClick={handleClear} className="w-32">
