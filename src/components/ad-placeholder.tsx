@@ -2,7 +2,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 
 declare global {
   interface Window {
@@ -14,30 +14,24 @@ declare global {
  * A component that renders a real Google AdMob banner ad unit for the App.
  */
 export function AdBanner({ className }: { className?: string }) {
-  const adRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const pushAd = () => {
       try {
-        const ad_container = adRef.current;
-        if (ad_container && ad_container.offsetWidth === 0) {
-            // Ad container has no width, retry after a short delay
-            setTimeout(pushAd, 50);
-            return;
-        }
         (window.adsbygoogle = window.adsbygoogle || []).push({});
       } catch (err) {
         console.error("AdMob error:", err);
       }
     };
 
-    // Initial push
-    pushAd();
+    // Delay the push to ensure the container is rendered and has a width.
+    const timeout = setTimeout(pushAd, 50);
+
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
     <div
-      ref={adRef}
       className={cn(
         "flex w-full items-center justify-center text-black min-h-[50px] bg-transparent",
         className
