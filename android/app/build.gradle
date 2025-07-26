@@ -1,42 +1,52 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     namespace "com.alphajoy.kids.app"
-    compileSdk 34
+    compileSdkVersion 34
+
     defaultConfig {
         applicationId "com.alphajoy.kids.app"
-        minSdk 22
-        targetSdk 34
+        minSdkVersion 22
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    lintOptions {
-        abortOnError false
-    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+    lintOptions {
+        abortOnError false
+    }
 }
 
 repositories {
-    google()
-    mavenCentral()
+    flatDir{
+        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$androidx_appcompat_version"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidx_coordinatorlayout_version"
+    implementation "androidx.core:core-ktx:$androidx_core_version"
+    implementation "androidx.fragment:fragment:$androidx_fragment_version"
+    implementation "com.google.android.material:material:1.11.0"
+    implementation "androidx.exifinterface:exifinterface:$androidx_exifinterface_version"
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$androidx_test_ext_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidx_test_espresso_core_version"
     implementation project(':capacitor-android')
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    implementation project(':capacitor-splash-screen')
 }
+
+apply from: 'capacitor.build.gradle'

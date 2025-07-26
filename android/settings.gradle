@@ -1,0 +1,4 @@
+// GENERATED FILE - DO NOT EDIT
+include ':app'
+include ':capacitor-android'
+project(':capacitor-android').projectDir = new File(project(':app').projectDir, '../node_modules/@capacitor/android/capacitor')
