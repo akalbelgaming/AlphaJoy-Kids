@@ -10,7 +10,7 @@ const withPWA = withPWAInit({
 });
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  // output: 'export', // Disabling static export to enable AI server actions
   /* config options here */
   typescript: {
     ignoreBuildErrors: true,
@@ -32,5 +32,4 @@ const nextConfig: NextConfig = {
 };
 
 // Temporarily disabling PWA to ensure `output: 'export'` works correctly.
-// export default withPWA(nextConfig);
-export default nextConfig;
+export default withPWA(nextConfig);
