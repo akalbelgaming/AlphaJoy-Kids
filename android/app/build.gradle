@@ -1,19 +1,17 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'
 
 android {
     namespace "com.alphajoy.kids.app"
-    compileSdkVersion 34
-
+    compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "com.alphajoy.kids.app"
-        minSdkVersion 22
-        targetSdkVersion 34
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -21,11 +19,15 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
-    lintOptions {
-        abortOnError false
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        //noinspection DataBindingWithoutKapt
+        dataBinding true
     }
 }
 
@@ -39,14 +41,12 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "androidx.appcompat:appcompat:$androidx_appcompat_version"
     implementation "androidx.coordinatorlayout:coordinatorlayout:$androidx_coordinatorlayout_version"
-    implementation "androidx.core:core-ktx:$androidx_core_version"
-    implementation "androidx.fragment:fragment:$androidx_fragment_version"
-    implementation "com.google.android.material:material:1.11.0"
-    implementation "androidx.exifinterface:exifinterface:$androidx_exifinterface_version"
+    implementation "androidx.core:core-ktx:$androidx_core_ktx_version"
+    implementation "androidx.constraintlayout:constraintlayout:$androidx_constraintlayout_version"
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$androidx_test_ext_junit_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidx_test_espresso_core_version"
     implementation project(':capacitor-android')
 }
 
-apply from: 'capacitor.build.gradle'
+apply from: "capacitor.build.gradle"
