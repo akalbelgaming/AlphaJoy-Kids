@@ -48,7 +48,7 @@ const content = {
      why: {
       title: "Why Choose AlphaJoy Kids?",
       list: [
-        { icon: <Shield className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />, title: "Safe for Kids", description: "We have implemented safe ads following AdSense policies to ensure a child-friendly environment." },
+        { icon: <Shield className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />, title: "Safe for Kids", description: "We use Google AdMob and have implemented safe ad policies to ensure a child-friendly environment." },
         { icon: <Heart className="h-8 w-8 text-red-500 flex-shrink-0 mt-1" />, title: "Parent-Approved", description: "This app is designed under parental guidance to provide a positive and educational experience for children." },
         { icon: <Star className="h-8 w-8 text-yellow-500 flex-shrink-0 mt-1" />, title: "Learning Through Play", description: "Our interactive games keep children engaged, allowing them to learn new things while having fun." },
       ]
@@ -95,7 +95,7 @@ const content = {
     why: {
       title: "AlphaJoy Kids क्यों चुनें?",
       list: [
-        { icon: <Shield className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />, title: "बच्चों के लिए सुरक्षित", description: "हमने बच्चों की सुरक्षा को ध्यान में रखते हुए, AdSense की नीतियों का पालन करते हुए, केवल सुरक्षित विज्ञापन लगाए हैं।"},
+        { icon: <Shield className="h-8 w-8 text-green-500 flex-shrink-0 mt-1" />, title: "बच्चों के लिए सुरक्षित", description: "हमने Google AdMob का उपयोग किया है और बच्चों के अनुकूल वातावरण सुनिश्चित करने के लिए सुरक्षित विज्ञापन नीतियां लागू की हैं।"},
         { icon: <Heart className="h-8 w-8 text-red-500 flex-shrink-0 mt-1" />, title: "माता-पिता द्वारा प्रमाणित", description: "यह ऐप माता-पिता की देखरेख में बनाया गया है ताकि बच्चों को एक सकारात्मक और सीखने योग्य माहौल मिल सके।"},
         { icon: <Star className="h-8 w-8 text-yellow-500 flex-shrink-0 mt-1" />, title: "खेल-खेल में पढ़ाई", description: "हमारे इंटरैक्टिव गेम्स बच्चों को बोर नहीं होने देते और वे खेल-खेल में ही बहुत कुछ सीख जाते हैं।"},
       ]
@@ -319,5 +319,3 @@ export function WebLandingPage() {
     </div>
   );
 }
-
-    
