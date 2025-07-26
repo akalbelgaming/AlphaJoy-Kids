@@ -686,6 +686,9 @@ export default function GameClient({ mode }: {mode: Mode}) {
         </aside>
 
         <main className="flex-1 flex flex-col items-center justify-start relative">
+          <div className="w-full my-4">
+              <AdBanner />
+          </div>
           <div className="w-full flex justify-center items-center mb-4 gap-4">
             <Button variant="outline" size="lg" onClick={handlePrev} disabled={characterSet.length === 0}>
               <ArrowLeft className="mr-2" /> Prev
@@ -713,10 +716,6 @@ export default function GameClient({ mode }: {mode: Mode}) {
             <Button variant="outline" size="lg" onClick={handleNext} disabled={characterSet.length === 0}>
               Next <ArrowRight className="ml-2" />
             </Button>
-          </div>
-          
-          <div className="w-full my-4">
-              <AdBanner />
           </div>
 
           <div className="w-full flex-1 flex flex-col items-center justify-center">
