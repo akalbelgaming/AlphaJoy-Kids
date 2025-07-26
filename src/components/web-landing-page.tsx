@@ -17,6 +17,7 @@ import {
   DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import { AdsenseBanner } from './adsense-placeholder';
 
 
 type Language = 'en' | 'hi';
@@ -306,8 +307,11 @@ export function WebLandingPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-8 px-4 pb-20">
+      <footer className="bg-primary text-primary-foreground py-8 px-4">
         <div className="container mx-auto text-center">
+          <div className="mb-6">
+            <AdsenseBanner className="max-w-4xl mx-auto"/>
+          </div>
           <p>{currentContent.footer.copyright}</p>
           <div className="mt-4">
             <Link href="/privacy" className="text-sm text-primary-foreground/80 hover:text-white hover:underline">
@@ -319,3 +323,5 @@ export function WebLandingPage() {
     </div>
   );
 }
+
+    

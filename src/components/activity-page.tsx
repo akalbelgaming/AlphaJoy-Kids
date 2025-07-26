@@ -38,7 +38,7 @@ export default function ActivityPage({ mode, title }: ActivityPageProps) {
         </div>
       </header>
       
-      <main className="flex-1 flex flex-col p-4">
+      <main className="flex-1 flex flex-col p-4 mb-20">
         {isClient ? <GameClient mode={mode} /> : (
           <div className="flex-1 flex items-center justify-center">
              {/* This will be shown to crawlers and during server render */}
@@ -53,3 +53,5 @@ export default function ActivityPage({ mode, title }: ActivityPageProps) {
     </div>
   );
 }
+
+    
